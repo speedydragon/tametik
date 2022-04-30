@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menuli {
+    @apply p-3 cursor-pointer text-base
+}
+
+.menuBTN {
+    @apply w-42 h-8 border border-solid border-black rounded-lg
+}
+
+.stepsSVG {
+    @apply pl-20 box-content
+}
+
+.btn {
+    @apply w-96 h-20 rounded-lg border border-solid border-black bg-white text-2xl mb-12 transform hover:shadow-inner hover:bg-opacity-50 transition ease-out duration-500
+}
+
+.formField {
+    @apply flex flex-col mb-4
+}
+
+.uncompleted {
+    @apply w-full h-8 rounded-md px-3 border border-solid border-red-700 transition-all duration-200 ease-in
+}
+
+.formInput {
+    @apply w-full h-8 rounded-md px-3 border border-solid border-silver transition-all duration-200 ease-in
+}
+
+.formLabal {
+    @apply mb-1 mr-1 text-lg font-extralight
+}
+
+.errorSpan {
+    @apply text-red-700 font-extralight text-sm
+}
+
+.codeInput {
+    @apply border-b border-solid border-black w-64 text-center shadow-sm focus:outline-none focus:border-lime-600 transition ease-in-out duration-200
+}
