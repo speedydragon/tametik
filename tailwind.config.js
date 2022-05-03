@@ -40,7 +40,10 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      'silver' : '#c0c0c0'
+      'silver' : '#c0c0c0',
+      'btnbcolor' : '#757575',
+      'booking' : '#E81657',
+      'bookingDark' : '#cf134d'
     }),
     columns: {
       auto: 'auto',
@@ -95,6 +98,7 @@ module.exports = {
       24: '6rem',
       28: '7rem',
       32: '8rem',
+      34: '8.625',
       36: '9rem',
       40: '10rem',
       44: '11rem',
@@ -107,8 +111,9 @@ module.exports = {
       80: '20rem',
       96: '24rem',
       42: '185px',
+      97: '25.375rem',
       110: '28.5rem',
-      120: '30rem',
+      120: '31.25rem',
     },
     animation: {
       none: 'none',
@@ -159,6 +164,7 @@ module.exports = {
       auto: 'auto',
       cover: 'cover',
       contain: 'contain',
+      '100%': '100%',
     },
     blur: {
       0: '0',
@@ -195,6 +201,7 @@ module.exports = {
       DEFAULT: '0.25rem',
       md: '0.375rem',
       lg: '0.5rem',
+      '2lg': '0.625rem',
       xl: '0.75rem',
       '2xl': '1rem',
       '3xl': '1.5rem',
@@ -396,6 +403,8 @@ module.exports = {
       '7xl': ['4.5rem', { lineHeight: '1' }],
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
+      '10xl': ['2.75rem', { lineHeight: '1' }],
+      'bannerFont': ['3vw', { lineHeight: '1' }],
     },
     fontWeight: {
       thin: '100',

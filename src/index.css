@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 .menuli {
-    @apply p-3 cursor-pointer text-base
-}
-
-.menuBTN {
-    @apply w-42 h-8 border border-solid border-black rounded-lg
+    @apply cursor-pointer text-sm
 }
 
 .stepsSVG {
@@ -40,4 +36,8 @@
 
 .codeInput {
     @apply border-b border-solid border-black w-64 text-center shadow-sm focus:outline-none focus:border-lime-600 transition ease-in-out duration-200
+}
+
+.borderbottom {
+    @apply border-solid border-btnbcolor rounded-b-sm border-b-4
 }
