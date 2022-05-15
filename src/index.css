@@ -6,8 +6,8 @@
     @apply cursor-pointer text-sm
 }
 
-.stepsSVG {
-    @apply pl-20 box-content
+.mobileMenuLi {
+    @apply cursor-pointer text-sm my-4 hover:text-booking
 }
 
 .btn {
@@ -40,4 +40,12 @@
 
 .borderbottom {
     @apply border-solid border-btnbcolor rounded-b-sm border-b-4
+}
+
+.transition200 {
+    @apply transition-all duration-200 ease-out
+}
+
+.svgCard {
+    @apply h-96.5 bg-cardBackgroud flex flex-col items-center justify-evenly border border-solid border-cardborder rounded-2lg shadow-sm
 }

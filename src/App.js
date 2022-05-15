@@ -14,8 +14,8 @@ function App() {
       <Navbar/>
       <Signin/>
       <Benefits/>
-      <Steps/>
       <Teamworking/>
+      <Steps/>
       <Footer/>
     </div>
   );

@@ -5,13 +5,18 @@ module.exports = {
   presets: [],
   darkMode: 'media', // or 'class'
   theme: {
+
     screens: {
+      xs: '521px',
       sm: '640px',
-      md: '768px',
-      lg: '1024px',
+      md: '816px',
+      // md: '768px',
+      halflg: '1000px',
+      lg: '1104px',
       xl: '1280px',
       '2xl': '1536px',
     },
+    
     colors: ({ colors }) => ({
       inherit: colors.inherit,
       current: colors.current,
@@ -43,7 +48,9 @@ module.exports = {
       'silver' : '#c0c0c0',
       'btnbcolor' : '#757575',
       'booking' : '#E81657',
-      'bookingDark' : '#cf134d'
+      'bookingDark' : '#cf134d',
+      'cardBackgroud' : '#F1F0F5',
+      'cardborder' : '#e5e7eb',
     }),
     columns: {
       auto: 'auto',
@@ -94,6 +101,7 @@ module.exports = {
       12: '3rem',
       14: '3.5rem',
       16: '4rem',
+      16.25: '4.125rem',
       20: '5rem',
       24: '6rem',
       28: '7rem',
@@ -110,6 +118,7 @@ module.exports = {
       72: '18rem',
       80: '20rem',
       96: '24rem',
+      96.5: '24.5rem',
       42: '185px',
       97: '25.375rem',
       110: '28.5rem',
@@ -126,6 +135,25 @@ module.exports = {
       auto: 'auto',
       square: '1 / 1',
       video: '16 / 9',
+      1: '1',
+      2: '2',
+      3: '3',
+      4: '4',
+      5: '5',
+      6: '6',
+      7: '7',
+      8: '8',
+      9: '9',
+      10: '10',
+      11: '11',
+      12: '12',
+      13: '13',
+      14: '14',
+      15: '15',
+      16: '16',
+    },
+    variants: {
+      aspectRatio: ['responsive', 'hover']
     },
     backdropBlur: ({ theme }) => theme('blur'),
     backdropBrightness: ({ theme }) => theme('brightness'),
@@ -398,13 +426,13 @@ module.exports = {
       '2xl': ['1.5rem', { lineHeight: '2rem' }],
       '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
       '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+      '4.5xl': ['2.5rem', { lineHeight: '2rem' }],
+      '4.75xl': ['2.75rem', { lineHeight: '1' }],
       '5xl': ['3rem', { lineHeight: '1' }],
       '6xl': ['3.75rem', { lineHeight: '1' }],
       '7xl': ['4.5rem', { lineHeight: '1' }],
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
-      '10xl': ['2.75rem', { lineHeight: '1' }],
-      'bannerFont': ['3vw', { lineHeight: '1' }],
     },
     fontWeight: {
       thin: '100',
@@ -966,5 +994,7 @@ module.exports = {
     'active',
     'disabled',
   ],
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio')
+  ],
 }
