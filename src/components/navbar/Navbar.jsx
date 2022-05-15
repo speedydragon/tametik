@@ -9,9 +9,9 @@ const Navbar = () => {
     }
 
     return ( 
-        <div className="bg-white sticky top-0 z-50 shadow-md">
+        <div className="bg-white sticky top-0 z-10 shadow-md">
 
-            <div className={openHam ? "flex absolute top-[67px] sm:w-1/2 w-4/6 h-screen bg-[rgba(255,255,255,0.72)] backdrop-blur-xl" : "hidden"}>
+            <div className={openHam ? "flex absolute top-[67px] sm:w-1/2 w-4/6 h-screen bg-[rgba(220,220,220,0.72)] backdrop-blur-xl" : "hidden"}>
 
                 <ul className="flex flex-col pr-6 pt-3 pb-3 w-full">
                     <li className="mobileMenuLi transition200">صفحه اصلی</li>

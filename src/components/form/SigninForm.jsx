@@ -10,7 +10,7 @@ import { notify } from "./toast"
 
 
 
-const SigninForm = ({setPage , data , setData}) => {
+const SigninForm = ({setPage , data , setData , setOpenModal}) => {
 
 
     const [errors, setErrors] = useState({});
@@ -59,8 +59,15 @@ const SigninForm = ({setPage , data , setData}) => {
     <div>
 
     <form onSubmit={submitHandler} >
+        
+        <div className='flex justify-between'>
 
-        <h2 className="text-left mb-10 text-3xl text-blue-700">SignUp</h2>
+            <h2 className="mb-10 text-3xl text-booking">ثبت نام</h2>
+
+            <div onClick={setOpenModal} className="mt-1 h-fit cursor-pointer text-xl hover:bg-neutral-300 shadow-inner hover:shadow-none bg-neutral-100 rounded transition200 " >
+                <span className='px-2 py-1 font-thin text-slate-700 hover:text-black'>X</span>
+            </div>
+        </div>
 
         <div className="nameContainer">
 
@@ -93,7 +100,7 @@ const SigninForm = ({setPage , data , setData}) => {
 
         <div className="flex justify-center mt-10">
                         
-            <button type="submit" className="bg-blue-700 px-40 py-3 text-white rounded border-none text-sm font-medium text-center transition-all duration-200 ease-in hover:bg-blue-600">Send Code</button>
+            <button type="submit" className="bg-booking w-full py-3 text-white rounded-lg border-none text-sm font-medium text-center transition-all duration-200 ease-in hover:bg-bookingDark">ارسال کد</button>
         
         </div>
     </form>

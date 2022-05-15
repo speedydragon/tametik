@@ -6,7 +6,7 @@ import { notify } from "./toast"
 import CountDown from './CountDown';
 
 
-function Codepage({data , setPage}) {
+function Codepage({data , setPage , setOpenModal}) {
 
   const button = useRef(null);
 
@@ -68,21 +68,26 @@ function Codepage({data , setPage}) {
   return (
     <>
       <form onSubmit={finalSubmit}>
+      <div className="flex justify-end mb-2">
+      <div onClick={setOpenModal} className="h-fit w-fit cursor-pointer text-xl hover:bg-neutral-300 shadow-inner hover:shadow-none bg-neutral-100 rounded transition200" >
+          <span className='px-2 py-1 font-thin text-slate-700 hover:text-black text-center'>X</span>
+      </div>
+      </div>
         <div>
-          <p className="text-center font-extralight text-sm">کد ارسال شده برای شماره <span className="bg-slate-400 rounded-3xl py-2 px-3 mx-1">{data.phoneNum}</span> را وارد کنید.</p>
+          <p className="text-center font-extralight text-sm">کد ارسال شده برای شماره <span className="bg-slate-200 rounded-3xl py-2 px-3 font-black">{data.phoneNum}</span> را وارد کنید.</p>
         </div>
 
         <div className="flex justify-center mt-10 mb-3">
           <input className="codeInput" type="number" name="code" value={verificationCode.code} onChange={changeHandler} />
         </div>
 
-        <div className="flex justify-center mt-4">
-          <span className="text-lime-600"><CountDown duration={10} onTimesup={onTimesup} /></span>
+        <div className="flex justify-center pt-4">
+          <span className="text-booking"><CountDown duration={10} onTimesup={onTimesup}/></span>
         </div>
 
-        <div className="mt-10 mb-3 flex justify-around">
-          <button type="submit" ref={button} className="border-none rounded-3xl px-11 py-1 text-white bg-lime-600 hover:bg-lime-700 transition-all ease-in-out duration-200 font-extralight text-sm">تایید کد</button>
-          <button type="submit" className="border-none rounded-3xl px-4 py-1 bg-gray-200 hover:bg-gray-300 transition-all ease-in-out duration-200 font-extralight text-sm" onClick={goBackBTN}>ویرایش اطلاعات</button>
+        <div className="mt-8 mb-3 flex justify-around">
+          <button type="submit" ref={button} className="border-none rounded-3xl px-9 py-1 text-white bg-booking hover:bg-bookingDark transition200 font-extralight text-sm">تایید کد</button>
+          <button type="submit" className="border-none rounded-3xl px-4 py-1 bg-gray-200 hover:bg-gray-300 transition200 font-extralight text-sm" onClick={goBackBTN}>ویرایش اطلاعات</button>
         </div>
       </form>
       <ToastContainer/>
